@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+        <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            .site-nav{display:flex;align-items:center;justify-content:space-between;padding:8px 0}
+            .nav-links a{margin-left:12px;text-decoration:none;color:inherit}
+        </style>
+        <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+</head>
+<body>
+    <nav class="site-nav" role="navigation">
+        <div class="brand"><a href="index.html">Intramurals</a></div>
+        <button class="nav-toggle" aria-expanded="false" aria-label="Open menu"><span class="hamburger"></span></button>
+        <div class="nav-links">
+            <a href="signup.html">Sign Up</a>
+            <a href="teamchecker.html">Team Checker</a>
+            <a href="players.html">Players</a>
+        </div>
+    </nav>
+    <h1>Intramurals SY 2025-2026</h1>
+    <h2>Create Account</h2>
+    
+    <div>
+        <form>
+            <label>Username:</label><br>
+            <input id="username" type="text" placeholder="Enter username"><br>
+            
+            <label>Password:</label><br>
+            <input id="password" type="password" placeholder="Enter password"><br>
+            
+            <input type="button" value="Sign up" py-click="signup_form">
+        </form>
+    </div>
+    
+    <div id="signup_output"></div>
+        <py-script src="main.py"></py-script>
+        
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Players List</title>
+        <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            .site-nav{display:flex;align-items:center;justify-content:space-between;padding:8px 0}
+            .nav-links a{margin-left:12px;text-decoration:none;color:inherit}
+        </style>
+        <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+</head>
+<body>
+    <nav class="site-nav" role="navigation">
+        <div class="brand"><a href="index.html">Intramurals</a></div>
+        <button class="nav-toggle" aria-expanded="false" aria-label="Open menu"><span class="hamburger"></span></button>
+        <div class="nav-links">
+            <a href="signup.html">Sign Up</a>
+            <a href="teamchecker.html">Team Checker</a>
+            <a href="players.html">Players</a>
+        </div>
+    </nav>
+    <h1>Intramurals SY 2025-2026</h1>
+    <h2>Intramurals Players:</h2>
+    
+    <button py-click="show_players_list">Click here</button>
+    
+    <div id="players_output" class="players-list"></div>
+        <py-script src="main.py"></py-script>
+        
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Checker</title>
+        <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            .site-nav{display:flex;align-items:center;justify-content:space-between;padding:8px 0}
+            .nav-links a{margin-left:12px;text-decoration:none;color:inherit}
+        </style>
+        <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+</head>
+<body>
+    <nav class="site-nav" role="navigation">
+        <div class="brand"><a href="index.html">Intramurals</a></div>
+        <button class="nav-toggle" aria-expanded="false" aria-label="Open menu"><span class="hamburger"></span></button>
+        <div class="nav-links">
+            <a href="signup.html">Sign Up</a>
+            <a href="teamchecker.html">Team Checker</a>
+            <a href="players.html">Players</a>
+        </div>
+    </nav>
+    <h1>Intramurals SY 2025-2026</h1>
+    <h2>Seatwork 2 Third Quarter</h2>
+    
+    <div>
+        <form>
+            <label>Are you done with the online registration?</label><br>
+            <input type="radio" id="reg_yes" name="registration" value="Yes"> Yes
+            <input type="radio" id="reg_no" name="registration" value="No"> No<br>
+            
+            <label>Do you have the medical clearance from the clinic?</label><br>
+            <input type="radio" id="med_yes" name="medical" value="Yes"> Yes
+            <input type="radio" id="med_no" name="medical" value="No"> No<br>
+            
+            <label>What's your Grade & Section?</label><br>
+            <select id="grade">
+                <option value="">Select Grade</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select><br>
+            
+            <select id="section">
+                <option value="">Select Section</option>
+                <option value="Ruby">Ruby</option>
+                <option value="Emerald">Emerald</option>
+                <option value="Sapphire">Sapphire</option>
+                <option value="Diamond">Diamond</option>
+            </select><br>
+            
+            <input type="button" value="Sign up" py-click="team_checker_form">
+        </form>
+    </div>
+    
+    <div id="teamchecker_output"></div>
+        <py-script src="main.py"></py-script>
+        <!-- plain nav, no JS -->
+</body>
+</html>
